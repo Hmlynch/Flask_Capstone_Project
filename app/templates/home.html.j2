@@ -1,0 +1,27 @@
+{% extends './layout.html.j2' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <div class="home_page_container">
+        <h1>Home</h1>
+        <p>This will include all of our home page information.</p>
+        {% for result in data %} 
+        <h3>{{ result.title }}</h3>
+        <div class="ind_movie_post">
+            <img class="home_image" src="https://image.tmdb.org/t/p/original/{{ result.poster_path }}" > 
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
+
+
+{# 
+    {% if current_user.is_authenticated %}
+        <p>Welcome to our app {{ user.username }}</p>
+    {% else %}
+        <p>Please <a id="login_tag_home_page" href="{{ url_for('auth.login') }}">login</a></p>
+    {% endif %} 
+#}

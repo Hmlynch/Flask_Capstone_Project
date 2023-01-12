@@ -1,0 +1,64 @@
+{% extends './layout.html.j2' %}
+
+{% block title %}About{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <div class="main_advanced_search">
+        <h1>Advanced Search</h1>
+        <div class="advanced_search_formdata">
+            <form id="formdata" method="GET" action=".">
+                <div class="platform_form">
+                    <label for="platform">Platform</label>
+                    <select id="platform" class="form-control">
+                        <option selected>Platform...</option>
+                        <option value="amazon prime video">Amazon Prime Video</option>
+                        <option value="disney plus">Disney Plus</option>
+                        <option value="hbo max">HBO Max</option>
+                        <option value="hulu">Hulu</option>
+                        <option value="neflix">Netflix</option>
+                    </select>
+                </div>
+                <div class="type_genres">
+                    <label for="genres">Genre</label>
+                    <select id="genres" class="form-control">
+                        <option selected>Genre...</option>
+                        <option value="action">Action</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="animation">Animation</option>
+                        <option value="comedy">Comedy</option>
+                        <option value="crime">Crime</option>
+                        <option value="documentary">Documentary</option>
+                        <option value="drama">Drama</option>
+                        <option value="family">Family</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="history">History</option>
+                        <option value="horror">Horror</option>
+                        <option value="music">Music</option>
+                        <option value="mystery">Mystery</option>
+                        <option value="romance">Romance</option>
+                        <option value="science fiction">Science Fiction</option>
+                        <option value="tv movie">TV Movie</option>
+                        <option value="thriller">Thriller</option>
+                        <option value="war">War</option>
+                        <option value="western">Western</option>
+                    </select>
+                </div>
+                <div class="min_production_year">
+                    <label for="release_date">Minimum Production Year</label>
+                    <input type="number" min=1960 max=2023 class="form-control" id="min_production_year" placeholder="1960">
+                </div>
+                <div class="max_production_year">
+                    <label for="release_date">Maximum Production Year</label>
+                    <input type="number" min=1960 max=2023 class="form-control" id="max_production_year" placeholder="2023">
+                </div>
+                <div class="min_rating">
+                    <label for="vote_average">Minimum Rating</label>
+                    <input type="number" min=0 max=10 class="form-control" id="min_rating" placeholder="0">
+                </div>
+                <button class="btn btn-primary" id="btn_advanced_search" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}

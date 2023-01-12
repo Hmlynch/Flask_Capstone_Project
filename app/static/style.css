@@ -1,0 +1,198 @@
+/* ENTIRE WEB_APPLICATION STYLING */
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+a:hover {
+    color: rgba(243, 243, 243, 0.851);
+}
+
+/* NAVBAR STYLING */
+nav {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    align-items: center;
+    border-radius: 0px 0px 20px 20px;
+    background-color: rgba(70, 69, 69, 1);
+}
+    /* individual navbar link items */
+.website_title {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+/* .website_title a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.website_title a:hover {
+    color: rgba(243, 243, 243, 0.851);
+} */
+.home {
+    width: 8%;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+.about {
+    width: 8%;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+form {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+.advanced_search {
+    width: 18%;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+}
+.login {
+    width: 8%;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+.register {
+    width: 8%;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+    /* searchbar/form styling */
+.input_text {
+    width: 70%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    border-radius: 20px;
+    padding: 0px 5px 0px 15px;
+}
+.input_text::placeholder {
+    text-align: right;
+}
+/* END OF NAVBAR STYLING */
+
+/* Login page */
+.login_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.login_form_info {
+    display: flex;
+    flex-direction: column;
+}
+/* End of Login page */
+
+/* Register page */
+.register_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 0px;
+}
+.register_form_info {
+    display: flex;
+    flex-direction: column;
+}
+/* End of Register page */
+
+/* Home Page */
+#login_tag_home_page {
+    color: blue;
+}
+/* .home_page_container {
+    display: flex;
+    flex-direction: column;
+} */
+.home_image {
+    width: 200px;
+}
+/* End of Home page */
+
+/* About Page */
+.about_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 100px;
+}
+.website_description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    background-color:rgba(224, 223, 223, 0.851);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+}
+.credit_section {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    background-color: rgba(224, 223, 223, 0.851);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+}
+.credit_sources {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 20px;
+}
+.credit_image {
+    width: 40%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+#ind_credit_image {
+    border-radius: 20px;
+    width: 250px;
+}
+.credit_text {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+p a{
+    color:rgb(49, 157, 229);
+}
+/* End of About Page */
+
+/* Advanced Search Page */
+.main_advanced_search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#formdata {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+#btn_advanced_search {
+    margin-top: 20px;
+    color: white;
+    background-color: rgb(49, 157, 229);
+    padding: 5px;
+    border-radius: 10px;
+}

@@ -1,0 +1,32 @@
+{% extends './layout.html.j2' %}
+
+{% block title %}About{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <div class="about_container">
+        <div class="website_description">
+            <h1>About</h1>
+            <div class="first_paragraph">
+                <p>This website was made for the purpose of giving the user access to an online movie database and provide movie results that are only provided on selected streaming platforms. The platforms that were used to set parameters for what movies populate are Netflix, Hulu, Amazon Prime Video, HBO Max, and Disney Plus. These are five of the most popular and most subscribed to platforms here in the United States. So, giving users access to find movies that are included in their subscription packages saves time for the user and makes it so that they don’t have to go into each individual streaming platform to search different movies. The point of this web application is to provide all the movies included in each one of these different platforms and display them on a single screen for the user to scroll through. The website gives two main ways of searching through the data, one being the search bar. The search bar allows the user to type in a title or a general title that will populate movies dependent on that variable they typed in. The second method is to use the advanced search function. The goal of this was to allow the user to put in dependent variables that would search through all 5 of the streaming platforms to give the best results for movies included in their packages.</p>
+            </div>
+            <div class="second_paragraph">
+                <p>I enjoyed working on this project, especially from the data side of the project. This allowed me to practice api calling to retrieve specific forms of data and display them for the user to see. It also helped me better understand how Flask works in structuring out the application and inserting specific functions depending on the different pages and routes. Although, the login and register functions operate, they don’t do much in the web applications status due to time restraints. But in a perfect world, my idea was to have the user sign into their account and add the movies that they have either seen or want to see. The end goal for storing this information would lead to more machine learning type practices where I would set recommendations based off their movies saved. By doing this, it would in turn create data that I could use later and provide SQL queries to see what movies each individual user chose and provide user wide data where I could develop data based on how many users selected certain types of movies. This project was very challenging, but I see myself continuing to work through bugs and errors along the way. The main goal later down the line is to give that ability for the user to login so that the website can start generating its own data and not have to rely solely on the api. </p>
+            </div>
+        </div>
+        <div class="credit_section"> 
+            <div class="credit_sources">
+                <div class="credit_image">
+                    <img id="ind_credit_image" src="../static/images/imdb_picture.jpeg" alt="imdb_logo">
+                </div>
+                <div class="credit_text">
+                    <h2>Credit</h2>
+                    <div class="credit_paragraph">
+                        <p>Lastly, I want to give credit to <a id=”api_credit_link” href=”https://www.themoviedb.org/”>TMDB </a>. This was the api my application pulled data from. The website itself has much to offer including reviews from multiple different platforms, movie/TV show information, and provides an easy access to their data. It was fun getting to learn all the different sources I could input that would bring up different pieces of data that I needed. The best part is their main website hub works just as “IMDB movies”, “Rotten Tomatoes”, and other mainstream movie rating platforms do. However, they make calling to their api free and easy to access, with multiple different contact supports to help you in your endeavors. IMDB is continuously updating their website and their api to satisfy the needs of their users and I would highly suggest this website. Especially if you are looking to include movie data into your application.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
