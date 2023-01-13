@@ -57,7 +57,7 @@ def register():
             return redirect(url_for('auth.login'))
         except:
             flash("An error has occured...", 'danger')
-    return render_template('register.html.2')
+    return render_template('register.html.j2')
 
 # Logout Section
 @app.route('/logout')
@@ -71,7 +71,7 @@ def logout():
 @login_required
 def reset_password():
     if request.method == 'GET':
-        return render_template('reset-password.html')
+        return render_template('reset-password.html.j2')
 
     old_password = request.form['oldPassword']
     confirm_old_password = request.form['confirmOldPassword']

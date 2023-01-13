@@ -20,3 +20,11 @@ class User(db.Model):
 
     def check_my_password(self, password):
         return check_password_hash(self.password, password)
+
+    def get_moves(self):
+        return [self.move1, self.move2, self.move3, self.move4]
+
+    def update_moves(self, new_moves):
+        self.move1, self.move2, self.move, self.move4 = new_moves
+        db.session.add(self)
+        db.session.commt()

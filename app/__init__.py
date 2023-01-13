@@ -21,3 +21,7 @@ app.register_blueprint(main_bp)
 
 from app.blueprints.auth import bp as auth_bp
 app.register_blueprint(auth_bp)
+
+login_manager.login_view = 'auth.login'
+login_manager.login_message = 'You are not allowed to access this page'
+login_manager.login_message_category = 'danger'

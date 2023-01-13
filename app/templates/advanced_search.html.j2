@@ -7,10 +7,10 @@
     <div class="main_advanced_search">
         <h1>Advanced Search</h1>
         <div class="advanced_search_formdata">
-            <form id="formdata" method="GET" action=".">
+            <form id="formdata" method="post" action="/advanced_search">
                 <div class="platform_form">
-                    <label for="platform">Platform</label>
-                    <select id="platform" class="form-control">
+                    <label for="platform_sq">Platform</label>
+                    <select id="platform_sq" class="form-control" name="platform_sq">
                         <option selected>Platform...</option>
                         <option value="amazon prime video">Amazon Prime Video</option>
                         <option value="disney plus">Disney Plus</option>
@@ -18,10 +18,10 @@
                         <option value="hulu">Hulu</option>
                         <option value="neflix">Netflix</option>
                     </select>
-                </div>
+                </div> 
                 <div class="type_genres">
                     <label for="genres">Genre</label>
-                    <select id="genres" class="form-control">
+                    <select id="genres" class="form-control" name="genre_sq">
                         <option selected>Genre...</option>
                         <option value="action">Action</option>
                         <option value="adventure">Adventure</option>
@@ -46,16 +46,16 @@
                 </div>
                 <div class="min_production_year">
                     <label for="release_date">Minimum Production Year</label>
-                    <input type="number" min=1960 max=2023 class="form-control" id="min_production_year" placeholder="1960">
+                    <input type="number" min=1960 max=2023 class="form-control" id="min_production_year" placeholder="1960" name="min_production_year_int_sq">
                 </div>
                 <div class="max_production_year">
                     <label for="release_date">Maximum Production Year</label>
-                    <input type="number" min=1960 max=2023 class="form-control" id="max_production_year" placeholder="2023">
+                    <input type="number" min=1960 max=2023 class="form-control" id="max_production_year" placeholder="2023" name="max_production_year_int_sq">
                 </div>
                 <div class="min_rating">
                     <label for="vote_average">Minimum Rating</label>
-                    <input type="number" min=0 max=10 class="form-control" id="min_rating" placeholder="0">
-                </div>
+                    <input type="number" min=0 max=10 class="form-control" id="min_rating" placeholder="0" name="min_rating_int_sq">
+                </div> 
                 <button class="btn btn-primary" id="btn_advanced_search" type="submit">Search</button>
             </form>
         </div>

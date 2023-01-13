@@ -5,7 +5,7 @@
 {% block content %}
 <div class="container">
     <div class="home_page_container">
-        <h1 id="trending_title">TRENDING</h1>
+        <h1 id="trending_title">Movies</h1>
         {% for result in data %} 
         <div class="ind_movie_container">
             <img class="movie_image" src="https://image.tmdb.org/t/p/original/{{ result.poster_path }}" > 
@@ -35,7 +35,7 @@
                         <p>{{ result.genres }}</p>
                     </div>
                     <div class="list_of_platforms_div">
-                        <h5>Streaming Platforms</h5>
+                        <h5>Streaming Platforms:</h5>
                         <p>{{ result.provider_name }}</p>
                     </div>
                 </div>
