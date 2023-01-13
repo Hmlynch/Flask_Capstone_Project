@@ -21,8 +21,8 @@
                 <a class="website_title" href="{{ url_for('main.home')}}">WHAT NEXT</a>
                 <a class="home" href="{{ url_for('main.home')}}">Home</a>
                 <a class="about" href="{{ url_for('main.about')}}">About</a>
-                <form>
-                    <input class="input_text" type="search" placeholder="Search for Movie...">
+                <form method="post" action="/search">
+                    <input class="input_text" type="search" placeholder="Search for Movie..." name="sq">
                 </form>
                 <a class="advanced_search" href="{{ url_for('main.advanced_search')}}">Advanced Search</a>
                 {# {% if current_user.is_anonymous %} #}
