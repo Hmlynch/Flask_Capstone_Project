@@ -5,12 +5,42 @@
 {% block content %}
 <div class="container">
     <div class="home_page_container">
-        <h1>Home</h1>
-        <p>This will include all of our home page information.</p>
+        <h1 id="trending_title">TRENDING</h1>
         {% for result in data %} 
-        <h3>{{ result.title }}</h3>
-        <div class="ind_movie_post">
-            <img class="home_image" src="https://image.tmdb.org/t/p/original/{{ result.poster_path }}" > 
+        <div class="ind_movie_container">
+            <img class="movie_image" src="https://image.tmdb.org/t/p/original/{{ result.poster_path }}" > 
+            <div class="ind_movie_post">
+                <h3>{{ result.title }}</h3>
+                <div class="description_div">
+                    <h5>Description:</h5>
+                    <p>{{ result.overview }}</p>
+                </div>
+                <div class="movie_information_div">
+                    <div class="runtime_div">
+                        <h5>Run Time:</h5>
+                        <p>{{ result.runtime }}</p>
+                    </div>
+                    <div class="release_date_div">
+                        <h5>Release Year:</h5>
+                        <p>{{ result.release_date }}</p>
+                    </div>
+                    <div class="vote_average_div">
+                        <h5>Rating:</h5>
+                        <p>{{ result.vote_average }}</p>
+                    </div>
+                </div>
+                <div class="list_of_genres_platforms">
+                    <div class="list_of_genres_div">
+                        <h5>Genres:</h5>
+                        <p>{{ result.genres }}</p>
+                    </div>
+                    <div class="list_of_platforms_div">
+                        <h5>Streaming Platforms</h5>
+                        <p>{{ result.provider_name }}</p>
+                    </div>
+                </div>
+                
+            </div>
         </div>
         {% endfor %}
     </div>
