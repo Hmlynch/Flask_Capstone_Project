@@ -32,18 +32,18 @@ def home():
                             p_list.append(j)
                 if provider_count >= 1:
                     data_dict = defaultdict()
-                    data_dict['title'] = movie_data['original_title']               # title
-                    data_dict['poster_path'] = movie_data['poster_path']            # movie poster
-                    data_dict['overview'] = movie_data['overview']                  # movie description
+                    data_dict['title'] = movie_data['original_title']              
+                    data_dict['poster_path'] = movie_data['poster_path']            
+                    data_dict['overview'] = movie_data['overview']                  
                     full_date = movie_data['release_date']
                     year = full_date[0:full_date.index("-")]
-                    data_dict['release_date'] = int(year)                                # release_date/year
+                    data_dict['release_date'] = int(year)                                
                     round_vote_avg = "{:.1f}".format(movie_data['vote_average'])
-                    data_dict['vote_average'] = round_vote_avg                      # ratings
+                    data_dict['vote_average'] = round_vote_avg                      
                     total_mins = movie_data['runtime']
-                    hours_mins = "{}hr:{}min".format(*divmod(total_mins, 60))       # movie runtime
+                    hours_mins = "{}hr:{}min".format(*divmod(total_mins, 60))       
                     data_dict['runtime'] = hours_mins
-                    data_dict['provider_name'] = ', '.join(map(str,p_list))      # subcription providers
+                    data_dict['provider_name'] = ', '.join(map(str,p_list))      
                     for x in movie_data['genres']:
                         genre_list.append(x['name'])
                     data_dict['genres'] = ', '.join(map(str,genre_list))
